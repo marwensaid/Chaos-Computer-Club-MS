@@ -28,4 +28,12 @@ public class BlogService {
     public void deletePost(Integer postId) {
 
     }
+
+    public Page<Comment> findComments(PostsRequestDTO request) {
+        return null;
+    }
+
+    public void deleteComment(Integer commentId) {
+
+    }
 }
