@@ -20,4 +20,12 @@ public class BlogService {
     public Comment createComment(Comment comment) {
         return null;
     }
+
+    public Post createPost(Post post) {
+        return null;
+    }
+
+    public void deletePost(Integer postId) {
+
+    }
 }
