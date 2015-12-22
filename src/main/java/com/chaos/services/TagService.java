@@ -11,4 +11,8 @@ public class TagService {
     public List<Tag> findAllTags() {
         return null;
     }
+
+    public Tag createTag(Tag tag) {
+        return null;
+    }
 }
