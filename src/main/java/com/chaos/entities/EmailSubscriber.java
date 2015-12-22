@@ -1,6 +1,7 @@
 package com.chaos.entities;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 /**
  * Created by marwen on 20/12/15.
@@ -8,7 +9,8 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "EMAIL_SUBSCRIBERS")
-public class EmailSubscriber {
+public class EmailSubscriber implements Serializable {
+    
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -18,10 +20,6 @@ public class EmailSubscriber {
     private String email;
     @Column(name = "name", length = 50)
     private String name;
-
-    public static long getSerialVersionUID() {
-        return serialVersionUID;
-    }
 
     public Integer getId() {
         return id;

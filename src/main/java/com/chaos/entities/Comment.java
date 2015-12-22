@@ -1,6 +1,7 @@
 package com.chaos.entities;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Date;
 
 /**
@@ -8,7 +9,7 @@ import java.util.Date;
  */
 @Entity
 @Table(name = "COMMENTS")
-public class Comment {
+public class Comment implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id
@@ -33,9 +34,6 @@ public class Comment {
     @JoinColumn(name="post_id")
     private Post post;
 
-    public static long getSerialVersionUID() {
-        return serialVersionUID;
-    }
 
     public Integer getId() {
         return id;

@@ -5,13 +5,14 @@ package com.chaos.entities;
  */
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
 @Entity
 @Table(name = "POSTS")
-public class Post {
+public class Post implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id

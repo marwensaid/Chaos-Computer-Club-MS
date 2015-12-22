@@ -1,6 +1,7 @@
 package com.chaos.entities;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 /**
  * Created by marwen on 20/12/15.
@@ -8,7 +9,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "TAGS")
-public class Tag {
+public class Tag implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id
