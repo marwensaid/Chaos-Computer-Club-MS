@@ -1,6 +1,6 @@
 package com.chaos.restControllers.endpoints.bo;
 
-import com.chaos.security.AuthenticatedUser;
+import com.chaos.restControllers.model.AuthenticatedUser;
 import com.chaos.security.SecurityUser;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
