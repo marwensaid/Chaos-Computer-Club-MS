@@ -2,6 +2,8 @@ package com.chaos.restControllers.endpoints.bo;
 
 import com.chaos.restControllers.model.AuthenticatedUser;
 import com.chaos.security.SecurityUser;
+import com.chaos.services.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -22,8 +24,8 @@ import java.util.List;
 @RequestMapping(value = "/api/users/", produces = MediaType.APPLICATION_JSON_VALUE)
 public class UserController {
 
-    //@Autowired
-    //private UserService userService;
+    @Autowired
+    private UserService userService;
 
     @RequestMapping(value = "/authenticatedUser", method = RequestMethod.GET)
     public ResponseEntity<AuthenticatedUser> getAuthenticatedUser() {
