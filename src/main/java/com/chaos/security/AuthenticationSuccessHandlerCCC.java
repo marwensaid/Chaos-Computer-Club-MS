@@ -7,6 +7,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
+import org.springframework.stereotype.Component;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -17,6 +18,8 @@ import java.io.PrintWriter;
 /**
  * Created by marwen on 25/12/15.
  */
+
+@Component
 public class AuthenticationSuccessHandlerCCC implements AuthenticationSuccessHandler {
     private static final Logger LOGGER = LoggerFactory.getLogger(AuthenticationSuccessHandlerCCC.class);
     private ObjectMapper mapper;
