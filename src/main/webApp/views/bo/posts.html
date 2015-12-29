@@ -6,7 +6,7 @@
         <table class="table table-condensed">
             <thead>
             <tr>
-                <th><input type="checkbox"> </th>
+                <th><input type="checkbox"></th>
                 <th>Title</th>
                 <th>Date</th>
             </tr>
@@ -16,6 +16,7 @@
                 <td><input type="checkbox" name="postId"></td>
                 <td>
                     <p>{{post.title}}</p>
+
                     <p><a href="" ng-click="editPost(post.id)">Edit</a>
                         <a href="#/posts/{{post.id}}">View</a>
                         <a href="" ng-click="sharePost(post.id)">Share</a>

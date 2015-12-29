@@ -1,21 +1,25 @@
-
 <div class="col-md-12">
     <div class="post">
         <h2>{{post.title}}</h2>
+
         <p><strong> {{post.createdOn | date:'EEEE yyyy-MMMM-dd' | uppercase}}</strong></p>
+
         <div ng-bind-html="post.content"></div>
     </div>
     <hr/>
     <div>
         <h3>Comments:</h3>
+
         <div class="comment" ng-repeat="comment in post.comments">
             <p><strong> {{comment.name}}</strong> {{comment.createdOn | date:'EEEE yyyy-MMMM-dd HH:mm'}}</p>
+
             <div ng-bind-html="comment.content"></div>
         </div>
     </div>
 
     <div>
-        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+             aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
 
@@ -41,7 +45,8 @@
             <div class="row">
                 <div class="form-group col-md-5">
                     <label for="email">Email</label>
-                    <input type="email" class="form-control" id="email" placeholder="Enter email" ng-model="newComment.email">
+                    <input type="email" class="form-control" id="email" placeholder="Enter email"
+                           ng-model="newComment.email">
                 </div>
             </div>
 
@@ -64,7 +69,7 @@
 </div>
 
 <script>
-    $(document).ready(function() {
+    $(document).ready(function () {
         $('#contentEditor').summernote({height: 300});
     });
 </script>

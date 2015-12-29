@@ -2,8 +2,10 @@
     <div ng-repeat="post in posts">
 
         <div class="post">
-            <h3> <a class="posttitle" href="#/posts/{{post.id}}">{{post.title}}</a> </h3>
+            <h3><a class="posttitle" href="#/posts/{{post.id}}">{{post.title}}</a></h3>
+
             <p><strong> {{post.createdOn | date:'EEEE yyyy-MMMM-dd' | uppercase}}</strong></p>
+
             <div>
                 <div ng-bind-html="post.contentPreview"></div>
                 <a href="#/posts/{{post.id}}">See more</a>
