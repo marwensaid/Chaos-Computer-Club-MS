@@ -2,7 +2,7 @@
  * Created by marwen on 28/12/15.
  */
 
-var cccBlog = angular.module('myApp', ['ui.router', 'ngResource', 'ngCookies', 'ngSanitize', 'ui-notification']);
+var cccBlog = angular.module('cccBlog', ['ui.router', 'ngResource', 'ngCookies', 'ngSanitize', 'ui-notification']);
 
 cccBlog.factory('responseObserver',
     function responseObserver($q, $window, $rootScope) {
@@ -42,60 +42,60 @@ cccBlog.config(function ($stateProvider, $urlRouterProvider, $locationProvider, 
         $stateProvider
             .state('login', {
                 url: '/login',
-                templateUrl: 'templates/login.html',
+                templateUrl: 'views/login.html',
                 controller: 'LoginController',
                 access: 'public'
             })
             .state('home', {
                 url: '/home',
-                templateUrl: 'templates/home.html',
+                templateUrl: 'views/home.html',
                 controller: 'HomeController',
                 access: 'public'
             })
             .state('newpost', {
                 url: '/newpost',
-                templateUrl: 'templates/newpost.html',
+                templateUrl: 'views/newpost.html',
                 controller: 'NewPostController'
             })
             .state('viewpost', {
                 url: '/posts/:postId',
-                templateUrl: 'templates/post.html',
+                templateUrl: 'views/post.html',
                 controller: 'PostController',
                 access: 'public'
             })
             .state('admin', {
                 url: '/admin',
-                templateUrl: 'templates/admin.html',
+                templateUrl: 'views/admin.html',
                 controller: 'AdminController'
             })
-            .state('admin.posts', {
+            .state('bo.posts', {
                 url: '/posts',
-                templateUrl: 'templates/admin/posts.html',
+                templateUrl: 'views/bo/posts.html',
                 controller: 'AdminPostsController'
             })
-            .state('admin.comments', {
+            .state('bo.comments', {
                 url: '/comments',
-                templateUrl: 'templates/admin/comments.html',
+                templateUrl: 'views/bo/comments.html',
                 controller: 'AdminCommentsController'
             })
-            .state('admin.tags', {
+            .state('bo.tags', {
                 url: '/tags',
-                templateUrl: 'templates/admin/tags.html',
+                templateUrl: 'views/bo/tags.html',
                 controller: 'AdminTagsController'
             })
-            .state('admin.emailSubscribers', {
+            .state('bo.emailSubscribers', {
                 url: '/emailSubscribers',
-                templateUrl: 'templates/admin/emailSubscribers.html',
+                templateUrl: 'views/bo/emailSubscribers.html',
                 controller: 'AdminEmailSubscribersController'
             })
-            .state('admin.settings', {
+            .state('bo.settings', {
                 url: '/settings',
-                templateUrl: 'templates/admin/settings.html',
+                templateUrl: 'views/bo/settings.html',
                 controller: 'AdminController'
             })
-            .state('admin.statistics', {
+            .state('bo.statistics', {
                 url: '/statistics',
-                templateUrl: 'templates/admin/statistics.html',
+                templateUrl: 'views/bo/statistics.html',
                 controller: 'AdminController'
             })
         ;
